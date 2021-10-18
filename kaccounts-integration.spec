@@ -6,7 +6,7 @@
 #
 Name     : kaccounts-integration
 Version  : 21.08.2
-Release  : 3
+Release  : 4
 URL      : https://download.kde.org/stable/release-service/21.08.2/src/kaccounts-integration-21.08.2.tar.xz
 Source0  : https://download.kde.org/stable/release-service/21.08.2/src/kaccounts-integration-21.08.2.tar.xz
 Source1  : https://download.kde.org/stable/release-service/21.08.2/src/kaccounts-integration-21.08.2.tar.xz.sig
@@ -86,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1634570225
+export SOURCE_DATE_EPOCH=1634572841
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -98,11 +98,11 @@ export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %cmake ..
-make  %{?_smp_mflags}
+make
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1634570225
+export SOURCE_DATE_EPOCH=1634572841
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kaccounts-integration
 cp %{_builddir}/kaccounts-integration-21.08.2/LICENSES/GPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/kaccounts-integration/2a638514c87c4923c0570c55822620fad56f2a33
