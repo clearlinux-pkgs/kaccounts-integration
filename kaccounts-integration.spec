@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : kaccounts-integration
-Version  : 22.08.3
-Release  : 17
-URL      : https://download.kde.org/stable/release-service/22.08.3/src/kaccounts-integration-22.08.3.tar.xz
-Source0  : https://download.kde.org/stable/release-service/22.08.3/src/kaccounts-integration-22.08.3.tar.xz
-Source1  : https://download.kde.org/stable/release-service/22.08.3/src/kaccounts-integration-22.08.3.tar.xz.sig
+Version  : 22.12.0
+Release  : 18
+URL      : https://download.kde.org/stable/release-service/22.12.0/src/kaccounts-integration-22.12.0.tar.xz
+Source0  : https://download.kde.org/stable/release-service/22.12.0/src/kaccounts-integration-22.12.0.tar.xz
+Source1  : https://download.kde.org/stable/release-service/22.12.0/src/kaccounts-integration-22.12.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0 LGPL-2.0
@@ -78,15 +78,15 @@ locales components for the kaccounts-integration package.
 
 
 %prep
-%setup -q -n kaccounts-integration-22.08.3
-cd %{_builddir}/kaccounts-integration-22.08.3
+%setup -q -n kaccounts-integration-22.12.0
+cd %{_builddir}/kaccounts-integration-22.12.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1667932134
+export SOURCE_DATE_EPOCH=1670544837
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -102,7 +102,7 @@ make
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1667932134
+export SOURCE_DATE_EPOCH=1670544837
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kaccounts-integration
 cp %{_builddir}/kaccounts-integration-%{version}/LICENSES/GPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/kaccounts-integration/2a638514c87c4923c0570c55822620fad56f2a33 || :
@@ -122,14 +122,11 @@ popd
 %files data
 %defattr(-,root,root,-)
 /usr/share/kpackage/kcms/kcm_kaccounts/contents/ui/AccountDetails.qml
-/usr/share/kpackage/kcms/kcm_kaccounts/contents/ui/Accounts.qml
 /usr/share/kpackage/kcms/kcm_kaccounts/contents/ui/AvailableAccounts.qml
 /usr/share/kpackage/kcms/kcm_kaccounts/contents/ui/MessageBoxSheet.qml
 /usr/share/kpackage/kcms/kcm_kaccounts/contents/ui/RemoveAccountDialog.qml
 /usr/share/kpackage/kcms/kcm_kaccounts/contents/ui/RenameAccountDialog.qml
-/usr/share/kpackage/kcms/kcm_kaccounts/metadata.desktop
-/usr/share/kpackage/kcms/kcm_kaccounts/metadata.json
-/usr/share/kservices5/kcm_kaccounts.desktop
+/usr/share/kpackage/kcms/kcm_kaccounts/contents/ui/main.qml
 
 %files dev
 %defattr(-,root,root,-)
@@ -167,10 +164,10 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libkaccounts.so.2
-/usr/lib64/libkaccounts.so.22.08.3
+/usr/lib64/libkaccounts.so.22.12.0
 /usr/lib64/qt5/plugins/kaccounts/daemonplugins/kaccounts_kio_webdav_plugin.so
-/usr/lib64/qt5/plugins/kcms/kcm_kaccounts.so
 /usr/lib64/qt5/plugins/kf5/kded/kded_accounts.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_kaccounts.so
 /usr/lib64/qt5/qml/org/kde/kaccounts/libkaccountsdeclarativeplugin.so
 /usr/lib64/qt5/qml/org/kde/kaccounts/qmldir
 
