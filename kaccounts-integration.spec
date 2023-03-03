@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : kaccounts-integration
-Version  : 22.12.2
-Release  : 21
-URL      : https://download.kde.org/stable/release-service/22.12.2/src/kaccounts-integration-22.12.2.tar.xz
-Source0  : https://download.kde.org/stable/release-service/22.12.2/src/kaccounts-integration-22.12.2.tar.xz
-Source1  : https://download.kde.org/stable/release-service/22.12.2/src/kaccounts-integration-22.12.2.tar.xz.sig
+Version  : 22.12.3
+Release  : 22
+URL      : https://download.kde.org/stable/release-service/22.12.3/src/kaccounts-integration-22.12.3.tar.xz
+Source0  : https://download.kde.org/stable/release-service/22.12.3/src/kaccounts-integration-22.12.3.tar.xz
+Source1  : https://download.kde.org/stable/release-service/22.12.3/src/kaccounts-integration-22.12.3.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0 LGPL-2.0
@@ -81,15 +81,15 @@ locales components for the kaccounts-integration package.
 
 
 %prep
-%setup -q -n kaccounts-integration-22.12.2
-cd %{_builddir}/kaccounts-integration-22.12.2
+%setup -q -n kaccounts-integration-22.12.3
+cd %{_builddir}/kaccounts-integration-22.12.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676832333
+export SOURCE_DATE_EPOCH=1677802543
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -105,7 +105,7 @@ make
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1676832333
+export SOURCE_DATE_EPOCH=1677802543
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kaccounts-integration
 cp %{_builddir}/kaccounts-integration-%{version}/LICENSES/GPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/kaccounts-integration/2a638514c87c4923c0570c55822620fad56f2a33 || :
@@ -167,7 +167,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libkaccounts.so.2
-/usr/lib64/libkaccounts.so.22.12.2
+/usr/lib64/libkaccounts.so.22.12.3
 /usr/lib64/qt5/plugins/kaccounts/daemonplugins/kaccounts_kio_webdav_plugin.so
 /usr/lib64/qt5/plugins/kf5/kded/kded_accounts.so
 /usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_kaccounts.so
