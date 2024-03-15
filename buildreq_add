@@ -3,3 +3,4 @@
 signond-dev
 libaccounts-qt-dev
 libaccounts-glib-dev
+qcoro6-dev
