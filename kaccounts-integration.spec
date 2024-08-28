@@ -9,7 +9,7 @@
 #
 Name     : kaccounts-integration
 Version  : 24.08.0
-Release  : 42
+Release  : 43
 URL      : https://download.kde.org/stable/release-service/24.08.0/src/kaccounts-integration-24.08.0.tar.xz
 Source0  : https://download.kde.org/stable/release-service/24.08.0/src/kaccounts-integration-24.08.0.tar.xz
 Source1  : https://download.kde.org/stable/release-service/24.08.0/src/kaccounts-integration-24.08.0.tar.xz.sig
